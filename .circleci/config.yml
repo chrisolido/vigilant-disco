@@ -28,14 +28,14 @@ workflows:
     jobs:
       - say-hello
 
-jobs:
+
   example-job:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
       - terraform/init
-workflows:
+
   example-workflow:
     jobs:
       - example-job
