@@ -23,19 +23,19 @@ jobs:
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
+  workflows:
+    say-hello-workflow:
+      obs:
       - say-hello
 
 
-  example-job:
-    docker:
-      # replace with your preferred image
+    example-job:
+      docker:
+        # replace with your preferred image
       - image: cimg/base:stable
-    steps:
-      - terraform/init
+      steps:
+        - terraform/init
 
-  example-workflow:
-    jobs:
+    example-workflow:
+      jobs:
       - example-job
